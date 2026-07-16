@@ -128,5 +128,4 @@ print(o == p)#this checks the values of the variable
 '''
 print("hello")
 
-print(4 & 5)
 
