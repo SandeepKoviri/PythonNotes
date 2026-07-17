@@ -1,100 +1,295 @@
-'''
-#__________________17/07/26________________
-            data types
-            ----------
-    to find date type of a variable we can use type() function
-    ------>syntex : type( variable_name )
-    to find memory location of a variable we can use id() function
-    ------>syntex : id( variable_name )
+# """
+# Python Day 3 – Programming Questions (Data Types)
+# Data Types
+# Write a program to store an integer, float, string, list, and Boolean value 
+# in different variables and print their data types using type().
+# a = 10
+# b = 10.5
+# c = "Hello"
+# d = [1, 2, 3]
+# e = True
+# print(type(a), type(b), type(c), type(d), type(e)) 
+# output: <class 'int'> <class 'float'> <class 'str'> <class 'list'> <class 'bool'>
 
-integers - 1, 2, 3, 4, 5# it's not iterable 
-floats - 1.0, 2.0, 3.0, 4.0, 5.0
-strings
---------
-it is a sequence of characters which is enclosed in single quotes(' '), double quotes(" "), triple single quotes(''' ''') or triple double quotes(""" """)
- - "Hello", 'World', '' Python'', """ Programming"""
- it's is immutable--- not modifiable
+# Write a program to print the memory address of five different variables using id().
+# a = 10
+# b = 10.5
+# c = "Hello"
+# d = [1, 2, 3]
+# e = True
+# print(id(a), id(b), id(c), id(d), id(e))
+# output: 140711123456784 140711123456800 140711123456816 140711123456832 140711123456848
 
- it is iterable and indexable
+# Write a program to compare the memory addresses of two variables having the same integer value.
+# a = 10
+# b = 10
+# c = 10.5
+# print(id(a), id(b), id(c))
+# output: 140711123456784 140711123456784 140711123456800
 
- methods of string
------------------
-replace() - it is used to replace a particular character with another character in a string
-    example :               #---------->syntax : variable_name.replace(old_character, new_character, count)#count is optional-- how many times we want to replace the character 
-    str = "Hello World"
-    print(str.replace("World", "Python"))
-    print(str)# immutable 
+# Strings
 
-join() - this method will add the new character after every character of the string
-    example :               ---------->syntax : 'new_string'.join(variable_name)
-    str = "hello everyone"
-    print(' '.join(str))
+# Write a program to input your name and print it.
+# name =  input("enter you name: ")
+# print(name)
+# output: enter you name: vamsi
+#         vamsi
 
-split() - it is used to split the string into a list of words based on a particular character
-    example :               ---------->syntax : variable_name.split(character)
-    str = "hello_everyone"
-    print(str.split("_"))#output : ['hello', 'everyone']
+# Write a program to print each character of a string using indexing.
+# name = "vamsi"
+# for i in range(len(name)):
+#     print(name[i])
+# output: v a m s i
 
-    time_ = input("Enter the time in 24 hour format : ")
-    time =time_.split(":")
-    print(f'time: {int(time[0])-12}:{time[1]}:{time[2]} ')
+# Write a program to print the first and last characters of a string.
+# name = "vamsi"
+# print(name[0], name[-1])
+# output: v i
 
-index() - it is used to find the index of a particular character in a string(it tells the first occurence of the character in the string)
-    example :               ---------->syntax : variable_name.index(character)
-    str = "hello everyone"
-    print(str.index("e"))#output : 1
-count() - it is used to find the number of occurences of a particular character in a string
-    example :               ---------->syntax : variable_name.count(character)
-    str = "hello everyone"
-    print(str.count("e"))#output : 4
-indexing 
-    example :               ---------->syntax : variable_name[index]
-    str = "hello everyone"
-    print(str[0], str[1], str[2])#output : h e l
+# Write a program to print the character at a user-given index.
+# name = "vamsi"
+# index = int(input("Enter an index: "))
+# print(name[index])
+# output: Enter an index: 2
 
-list - [1, 2, 3, 4, 5]# collection of different data types # it is mutable and iterable 
-            representation of list is in square brackets[] and separated by commas ,
-    example :               ---------->syntax : variable_name[index]
-    list_ = [1, 2, 3, 4, 5, "hello", 3.14, True,[1, 2, [11,"world"],3]]
-    print(list_[0], list_[1], list_[5], list_[8], list_[8][2][1][2]) #output : 1 2 hello [1, 2, [11, 'world'], 3] r
-    mutable - we can change the values of the list
-    example :               ---------->syntax : variable_name[index] = new_value
-    list_ = [1, 2, 3, 4, 5]
-    list_[0] = 10
-    print(list_)#output : [10, 2, 3, 4, 5]
- methods of list
------------------
-append() - it is used to add a new element at the end of the list
-    example :               ---------->syntax : variable_name.append(new_element)   
-    list_ = [1, 2, 3, 4, 5]
-    list_.append(6)
-    print(list_)#output : [1, 2, 3, 4, 5, 6]
-extend() - it is used to add multiple elements at the end of the list by seprate indexes
-    example :               ---------->syntax : variable_name.extend(new_elements)
-    list_ = [1, 2, 3, 4, 5]
-    list_.extend([6, 7, 8])
-    print(list_)#output : [1, 2, 3, 4, 5, 6, 7, 8]
+# Write a program to find the length of a string.
+# name = "vamsi"
+# print(len(name))
+# output: 5
 
-    example :   for difference of append extend
-    list_.append("python")
-    print(list_)# output : [1, 2, 3, 4, 5, 'python']
-    list_.extend("python")
-    print(list_)# output : [1, 2, 3, 4, 5, 'python', 'p', 'y', 't', 'h', 'o', 'n']
+# replace()
+# Write a program to replace "World" with "Python" in the string "Hello World".
+# a = "Hello World"
+# print(a.replace("World", "Python"))
+# output: Hello Python
 
-remove() - it is used to remove a particular element from the list
-    example :               ---------->syntax : variable_name.remove(element)
-    list_ = [1, 2, 3, 4, 5]
-    list_.remove(3)# delete the item based on the value given if not present it will give error
-    print(list_)#output : [1, 2, 4, 5]
+# Write a program to replace all spaces in a sentence with underscores (_).
+# a = "Hello everyone"
+# print(a.replace(" ", "_"))
+# output: Hello_everyone
 
-pop() - it is used to remove a particular element from the list based on the index
-    example :               ---------->syntax : variable_name.pop(index)    
-    list_ = [1, 2, 3, 4, 5]
-    list_.pop(2)# delete the item based on the index position given if not present it will give error(out of range)
-    print(list_)#output : [1, 2, 4, 5]
-    list_.pop()# delete the last item of the list
-    print(list_)#output : [1, 2, 4]
+# Write a program to replace only the first occurrence of "a" with "@".
+# a = "banana"
+# print(a.replace('a', '@',1))
+# output: b@nana
 
+# join()
+# Write a program to insert a space between every character of a string using join().
+# a = "hello"
+# print(' '.join(a))
+# output: h e l l o
 
+# Write a program to join all characters of a string using -.
+# a = "hello"
+# print('-'.join(a))
+# output: h-e-l-l-o
 
-'''
+# Write a program to join all characters of a string using *.
+# a = "hello"
+# print('*'.join(a))
+# output: h*e*l*l*o
+
+# split()
+# Write a program to split a sentence into words.
+# a = "hello everyone"
+# print(a.split())
+# output: ['hello', 'everyone']
+
+# Write a program to split a date (DD-MM-YYYY) into day, month, and year.
+# date = '25-04-2002'
+# day, month, year = date.split('-')
+# print(day, month, year)
+# output: 25 04 2002
+
+# Write a program to convert time from 24-hour format to 12-hour format using split().
+# time = input("Enter 24h time ")
+# time1 = time.split(':')
+# print(f'time : {int(time1[0])-12} : {time1[1]} ')
+# output : Enter 24h time 22:25
+#         time : 10 : 25 
+
+# index()
+# Write a program to find the index of the first occurrence of a character entered by the user.
+# name = input("enter character :")
+# str = "sandeep"
+# print(str.index(name))
+# #output : enter character :e
+#         #4
+# Write a program to find the index of "@" in an email address.
+# email = "your_email@email.com"
+# print(email.index('@'))
+# #output : 10
+
+# count()
+# Write a program to count the number of vowels in a string using count().
+# name = "sandeep"
+# vowels = "aeiouAEIOU"
+# count_vowels = sum(1 for ch in name if ch in vowels)
+# print(count_vowels)
+# # output: 3  
+
+# Write a program to count how many times a specific character appears in a string.
+# name = "banana"
+# character = "a"
+# print(name.count(character))
+# # output: 3     
+
+# Write a program to count the number of spaces in a sentence.
+# name = "hello everyone"
+# char = " "
+# print(name.count(char))
+# #output : 1
+# Indexing
+# Write a program to print every alternate character of a string.
+# name = "python"
+# print(name[::2])
+# # output: pto
+
+# # Write a program to print the first five characters of a string.
+# name = "programming"
+# print(name[:5])
+# # output: progra
+
+# # Write a program to print the last three characters of a string.
+# name = "python"
+# print(name[-3:])
+# # output: hon
+
+# Lists
+
+# Write a program to create a list containing different data types.
+# my_list = [10, 3.5, "Hello", True, [1, 2, 3]]
+# print(my_list)
+# # output: [10, 3.5, 'Hello', True, [1, 2, 3]]
+
+# # Write a program to print the first, middle, and last elements of a list.
+# numbers = [10, 20, 30, 40, 50]
+# print(numbers[0], numbers[len(numbers)//2], numbers[-1])
+# # output: 10 30 50
+
+# # Write a program to access a nested list element.
+# nested = [[1, 2, 3], [4, 5, 6]]
+# print(nested[1][2])
+# # output: 6
+
+# # Write a program to modify the first element of a list.
+# colors = ["red", "green", "blue"]
+# colors[0] = "yellow"
+# print(colors)
+# # output: ['yellow', 'green', 'blue']
+
+# # Write a program to replace the last element of a list with a new value.
+# fruits = ["apple", "banana", "cherry"]
+# fruits[-1] = "orange"
+# print(fruits)
+# # output: ['apple', 'banana', 'orange']
+
+# append()
+# # Write a program to append one element to a list.
+# fruits = ["apple", "banana"]
+# fruits.append("cherry")
+# print(fruits)
+# # output: ['apple', 'banana', 'cherry']
+
+# # Write a program to append a string entered by the user to a list.
+# items = []
+# value = input("Enter a value: ")
+# items.append(value)
+# print(items)
+
+# # Write a program to append another list as a single element.
+# list1 = [1, 2, 3]
+# list2 = [4, 5, 6]
+# list1.append(list2)
+# print(list1)
+# # output: [1, 2, 3, [4, 5, 6]]
+
+# # extend()
+# # Write a program to extend a list with another list.
+# nums1 = [1, 2, 3]
+# nums2 = [4, 5, 6]
+# nums1.extend(nums2)
+# print(nums1)
+# # output: [1, 2, 3, 4, 5, 6]
+
+# # Write a program to add multiple numbers to a list using extend().
+# numbers = [10, 20]
+# numbers.extend([30, 40, 50])
+# print(numbers)
+# # output: [10, 20, 30, 40, 50]
+
+# # Write a program to extend a list using a string and observe the output.
+# letters = ["a", "b"]
+# letters.extend("cd")
+# print(letters)
+# # output: ['a', 'b', 'c', 'd']
+
+# # append() vs extend()
+# # Write a program demonstrating the difference between append("Python") and extend("Python").
+# word_list = ["Java"]
+# word_list.append("Python")
+# print(word_list)
+# word_list = ["Java"]
+# word_list.extend("Python")
+# print(word_list)
+
+# # Write a program demonstrating the difference between append([6,7,8]) and extend([6,7,8]).
+# list_a = [1, 2]
+# list_a.append([6, 7, 8])
+# print(list_a)
+# list_b = [1, 2]
+# list_b.extend([6, 7, 8])
+# print(list_b)
+
+# # remove()
+# # Write a program to remove a given element from a list.
+# fruits = ["apple", "banana", "cherry"]
+# fruits.remove("banana")
+# print(fruits)
+# # output: ['apple', 'cherry']
+
+# # Write a program to remove the first occurrence of a repeated element.
+# nums = [1, 2, 2, 3]
+# nums.remove(2)
+# print(nums)
+# # output: [1, 2, 3]
+
+# # Write a program to remove a user-entered value from a list.
+# values = [10, 20, 30]
+# remove_value = int(input("Enter a value to remove: "))
+# values.remove(remove_value)
+# print(values)
+
+# # pop()
+# # Write a program to remove an element at a given index using pop().
+# items = ["a", "b", "c"]
+# items.pop(1)
+# print(items)
+# # output: ['a', 'c']
+
+# # Write a program to remove the last element using pop().
+# colors = ["red", "green", "blue"]
+# colors.pop()
+# print(colors)
+# # output: ['red', 'green']
+
+# # Write a program to store the popped value in another variable and print it.
+# letters = ["x", "y", "z"]
+# popped_value = letters.pop()
+# print(popped_value)
+# print(letters)
+# # output: z
+# # output: ['x', 'y']
+
+# Mixed Programs
+# Write a program to create a list of five names and replace one name with another.
+# Write a program to create a shopping list and add three new items using append() and extend().
+# Write a program to remove duplicate values manually using remove().
+# Write a program to split a sentence into words and store them in a list.
+# Write a program to join the words of a list using -.
+# Write a program to print the type and memory address of every element in a list.
+# Write a program to replace all occurrences of "Python" with "Java" in a string.
+# Write a program to count the occurrences of each vowel (a, e, i, o, u) in a string using count().
+# Write a program to create a nested list and access the deepest element.
+# Write a program that demonstrates type(), id(), string methods, and list methods in a single program.
+# """
