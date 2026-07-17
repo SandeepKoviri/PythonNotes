@@ -220,6 +220,7 @@
 # Write a program to check if a number lies between 10 and 100.
 # num = 50
 # print(num > 10 and num < 100)  # Output: True
+
 # # Bitwise Operators
 # # Write a program to perform bitwise AND on two numbers.
 # a = 5
@@ -245,6 +246,7 @@
 # # 00000101
 # # Shift left by 2
 # # 00010100
+
 # # Write a program to perform right shift (>>) on a number.
 # result = a >> 2
 # print("Right shift of", a, "by 2 positions is:", result)
