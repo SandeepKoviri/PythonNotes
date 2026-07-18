@@ -22,21 +22,25 @@ This repository contains:
 100-Days-of-Python/
 │
 ├── README.md
-├── PythonCompleteNotes.py
+├── PythonTilldayNotes.py
 │
 ├── Day-01/
 │   └── code.py
+|   └── day1Notes.py
 │
 ├── Day-02/
 │   └── code.py
+|   └── day2Notes.py
 │
 ├── Day-03/
 │   └── code.py
+|   └── day3Notes.py
 │
 ├── ...
 │
 ├── Day-100/
 │   └── code.py
+|   └── day100Notes.py
 │
 └── Projects/
 ```
