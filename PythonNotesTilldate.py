@@ -1,6 +1,6 @@
 ''' 
 #__________________15/04/26_________________
-
+day 1 history , comment's, variables
 Python was released in the year 1991 by Guido van Russom (version 0.9)
 
 What is Python ?
@@ -59,6 +59,7 @@ num , num_2 = num_2 ,num #swaping of two number's without 3rd veriable
 print(num)
 
 #___________________________16/07/26______________________
+day2 tokens -keywords, identifiers, operater's and literals
             Tokens
             -----
         token's are the smallest individule part or unit of a program which have some meaning in the program.
@@ -127,6 +128,7 @@ print(o == p)#this checks the values of the variable
 ( int, str, float, complex, bool, bytes, bytearray, list, tuple, set, dict )
 
 #__________________17/07/26________________
+day3 data types, strings, indexing, list
             data types
             ----------
     to find date type of a variable we can use type() function
@@ -222,8 +224,9 @@ pop() - it is used to remove a particular element from the list based on the ind
     list_.pop()# delete the last item of the list
     print(list_)#output : [1, 2, 4]
 
-day 4 
+day 4 tuple and dictionary
 ------------------18/07/26----------------------
+
 tuple
 ------
  ----> it a collections of different datatype that are represented in () and seprated by ,
