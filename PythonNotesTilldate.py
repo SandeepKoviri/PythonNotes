@@ -920,7 +920,13 @@ if len(atm_) == 4:
 
 else:
     print("pls enter 4 digit atm pin")
-
+output:
+Enter  4 dig atm pin8520
+Enter 
+1.Withdraw 
+2.Deposite 
+3.Exit2
+enter amount for deposit
 _____
 control statement:
 ----------------
@@ -1007,20 +1013,30 @@ while n < 10:
 assert keyword
 --------------
 --> the keyword is used to check the condition
-age = 15
+age = 15 next 22
 assert age>= 18,'not eligible'
 print('eligible')
+output:
+1.eligible
+
+2.    assert age>= 18,'not eligible'
+           ^^^^^^^^
+AssertionError: not eligible
 
 n = tuple(map(int,input("Enter 24h time :").split(':')))
-if n[0] >= 12 
-    if n[0] <= 24:
-        print(f'{n[0] -12}:{n[1]} PM')
-    else:
-        print(f'{n[0] -12}:{n[1]} AM')
+if n[0] >= 12 and n[0] <= 24:
+    print(f'{n[0] -12}:{n[1]} PM')  
 else:
-    print('Entered is more then 24h')
-    
+    print(f'{n[0]}:{n[1]} AM')
+output:
+Enter 24h time :21:36
+9:36 PM
+Enter 24h time :11:35
+11:35 AM
 '''
 
 
 
+age = 22
+assert age>= 18,'not eligible'
+print('eligible')
