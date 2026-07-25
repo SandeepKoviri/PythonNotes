@@ -8,7 +8,6 @@ while rem > 0:
     pin = input("Enter 4 digit pin: ")
     if len(pin) == 4:
         if pin == sbi_san['atm_pin']:
-        
             op = int(input('Enter : \n1.Check Balance \n2.WithDraw \n3.Deposit \n4.Transaction\'s \n5.Pin Change \n6.Exit \n Enter Your Choice: '))
             if op == 1:
                 print('Your current Balance = $',sbi_san['Balance'])
