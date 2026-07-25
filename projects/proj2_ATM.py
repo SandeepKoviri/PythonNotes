@@ -1,41 +1,74 @@
-balance = 10000
-
-while True:
-        print("\n====== ATM MENU ======")
-        print("1. Check Balance")
-        print("2. Deposit")
-        print("3. Withdraw")
-        print("4. Exit")
-
-        choice = int(input("enter u r choice(1-4): "))
-
-        if choice == 1:
-            print('Your current Balance = $',balance)
+sbi_san = {'Name':'sandeep',
+           'atm_pin':'8520',
+           'Balance': 78500
+}
+transactions = []
+rem = 3
+while rem > 0:
+    pin = input("Enter 4 digit pin: ")
+    if len(pin) == 4:
+        if pin == sbi_san['atm_pin']:
         
-        elif choice ==2 :
-            amount = float(input("Enter the amount to deposit: $"))
+            op = int(input('Enter : \n1.Check Balance \n2.WithDraw \n3.Deposit \n4.Transaction\'s \n5.Pin Change \n6.Exit \n Enter Your Choice: '))
+            if op == 1:
+                print('Your current Balance = $',sbi_san['Balance'])
+            if op == 2:
+                amount = int(input('Enter amount to withdraw'))
+                if amount <= sbi_san['Balance'] and amount %100 == 0:
+                    sbi_san['Balance'] -= amount
+                    transactions.append(f"-Withdraw: {amount}")
+                    print('collect u r cash')
+                    print("remaining balance : $",sbi_san['Balance'])
+                else:
+                    if amount <= 0:
+                        print('invalide amount!')
+                    elif amount > sbi_san['Balance']:
+                        print('insufficient funds') 
+            elif op ==3 :
+                amount = float(input("Enter the amount to deposit: $"))
+            
+                if amount > 0:
+                    sbi_san['Balance'] += amount
+                    transactions.append(f"-Deposit: {amount}")
+                    print(amount, 'deposited successfully')
+                    print("updated balance is : $",sbi_san['Balance'])
+                else:
+                    print('invalide amount!')
+            elif op == 4:
+                if transactions == 0:
+                    print('No transcations Found')
+                else:
+                    print('Transaction History')
+                    for i in transactions:
+                        print(i)
 
-            if amount > 0:
-                balance += amount
-                print(amount, 'deposited successfully')
-                print("updated balance is : $",balance)
-            else:
-                print('invalide amount!')
-        elif choice == 3:
-            amount = float(input("Enter the amount to Withdraw : $"))
+            elif op == 5:
+                old_pin = input('Enter Old pin :')
+                if old_pin in sbi_san['atm_pin']:
+                    new_pin = input('Enter New pin to Update: ')
+                    conform_pin = input('Conform New Pin :')
 
-            if amount <= 0:
-                print('invalide amount!')
-            elif amount > balance:
-                print('insufficient funds') 
-            else:
-                balance -= amount
-                print('collect u r cash')
-                print("remaining balance : $", balance)
-        elif choice == 4:
-            print('Thank you using')
-            break
+                    if len(new_pin) == 4 and new_pin.isdigit():
+                        if new_pin == conform_pin:
+                            sbi_san.update({'atm_pin': new_pin})
+                            print('Pin changed successfully')
+                        else:
+                            print('Pin did not match')
+                    else:
+                        print('Pin should be 4 digit ')
+                else:
+                    print('Incorrect Current pin')
+
+
+            elif op == 6:
+                print('Thank you for using Atm ')
+                break
         else:
-            print('Invalide choice! Try again')
-
+            rem -= 1
+            if rem > 0:
+                print(f'Incorrect pin still {rem} attempts lefts')
+            else:
+                print('Card block')
+    else:
+        print('Plz enter only 4 digit pin')
 
