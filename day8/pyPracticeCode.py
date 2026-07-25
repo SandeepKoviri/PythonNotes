@@ -158,31 +158,33 @@
 # Fee Paid: yes
 # Output:
 # Eligible for Exam
-
+# Atte = 80
+# Fee = 'yes'
+# if Atte >= 75 and fee == 'yes':
+#     print('Eligible for exam')
+# else:
+#     print('Not Eligible for exam')
 
 # Control Statements (3 Questions)
 # 8. Break
-
 # Question: Write a program to print numbers from 1 to 10 and stop when the number becomes 6.
-
 # Hint: Use break.
-
 # Output:
-
 # 1
 # 2
 # 3
 # 4
 # 5
 # 6
+# for i in range(1,10):
+#     print(i)
+#     if i == 6:
+#         break
+
 # 9. Continue
-
 # Question: Write a program to print numbers from 1 to 10, skipping the number 5.
-
 # Hint: Use continue.
-
 # Output:
-
 # 1
 # 2
 # 3
@@ -192,24 +194,26 @@
 # 8
 # 9
 # 10
+# for i in range(1,11):
+#     if i == 5:
+#         continue
+#     print(i)
+
+
 # 10. Pass
-
 # Question: Write a program using pass inside a loop.
-
 # Hint: Use pass as a placeholder.
-
 # Output:
-
 # Loop completed
+# for i in range(1,10):
+#     pass
+
+
 # For Loop (4 Questions)
 # 11. Print Numbers
-
 # Question: Write a program to print numbers from 1 to 10 using a for loop.
-
 # Hint: Use range().
-
 # Output:
-
 # 1
 # 2
 # 3
@@ -220,14 +224,13 @@
 # 8
 # 9
 # 10
+# for i in range(1,11):
+#     print(i)
+
 # 12. Even Numbers
-
 # Question: Write a program to print even numbers from 2 to 20.
-
 # Hint: Use range(2, 21, 2).
-
 # Output:
-
 # 2
 # 4
 # 6
@@ -238,42 +241,43 @@
 # 16
 # 18
 # 20
+# for i in range(2,21,2):
+#     print(i)
+
+
 # 13. Characters in a String
-
 # Question: Write a program to print each character of a string using a for loop.
-
 # Hint: Iterate through the string.
-
 # Input:
-
-# Python
-
+# Python:
 # Output:
-
 # P
 # y
 # t
 # h
 # o
 # n
+# a = 'python'
+# for i in range(a):
+#     print(i)
+
+
 # 14. Sum of First 10 Numbers
-
 # Question: Write a program to find the sum of numbers from 1 to 10 using a for loop.
-
 # Hint: Use an accumulator variable.
-
 # Output:
-
 # Sum = 55
+# count = 0
+# for i in range(1,11):
+#     count += i
+# print(count)
+
+
 # While Loop (3 Questions)
 # 15. Print Numbers
-
 # Question: Write a program to print numbers from 1 to 10 using a while loop.
-
 # Hint: Initialize and increment a variable.
-
 # Output:
-
 # 1
 # 2
 # 3
@@ -284,29 +288,31 @@
 # 8
 # 9
 # 10
+# i = 1
+# while i <= 10:
+#     print(i)
+#     i += 1
+
 # 16. Multiplication Table
-
 # Question: Write a program to print the multiplication table of a given number using a while loop.
-
 # Hint: Repeat until 10.
-
 # Input:
-
 # Enter number: 5
-
 # Output:
-
 # 5 x 1 = 5
 # ...
 # 5 x 10 = 50
+# n = int(input('Enter a number'))
+# i = 1
+# while i <= 10:
+
+#     print(f'{n} X {i} = {n*i}')
+#     i += 1
+
 # 17. Countdown
-
 # Question: Write a program to print a countdown from 10 to 1 using a while loop.
-
 # Hint: Decrement the variable.
-
 # Output:
-
 # 10
 # 9
 # 8
@@ -317,50 +323,59 @@
 # 3
 # 2
 # 1
+# i = 10
+# while i >= 1:
+#     print(i)
+#     i -= 1 
+
+
 # Mixed Practice (3 Questions)
 # 18. 24-Hour to 12-Hour Time
-
 # Question: Write a program to convert time from 24-hour format to 12-hour format.
-
 # Hint: Use split(), tuple(), and if-else.
-
 # Input:
-
 # Enter time: 18:30
-
 # Output:
-
 # 6:30 PM
+# a = tuple(map(int,input('Enter 24h time :').split(':')))
+# if a[0] >= 12 and a[0] <= 24:
+#     print(f'{a[0]- 12}:{a[1]} PM')
+# else:
+#     print(f'{a[0]}:{a[1]} AM')
+
+
 # 19. Assert Keyword
-
 # Question: Write a program to check whether a person is eligible to vote using the assert keyword.
-
 # Hint: Use assert age >= 18.
-
 # Input:
-
 # Age: 20
-
 # Output:
-
 # Eligible
+# age = int(input('Enter age: '))
+# assert age >= 18,'Not Eligible'
+# print('eligible')
+
 # 20. Mixed Program
 
 # Question: Write a program that:
-
 # Takes a list of numbers.
 # Prints only even numbers using a for loop.
 # Skips one specific number using continue.
 # Stops the loop when a given number is found using break.
-
 # Hint: Use if, continue, and break together.
-
 # Sample Input:
-
 # [2, 4, 6, 8, 10, 12]
-
 # Sample Output:
-
 # 2
 # 4
 # 8
+a = [2, 4, 6, 8,10, 12]
+for i in a:
+    if i%2 != 0:
+        continue
+    if i ==6:
+        continue
+    print(i)
+    if i == 8:
+        break
+    
