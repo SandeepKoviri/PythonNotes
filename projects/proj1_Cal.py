@@ -1,3 +1,4 @@
+
 # Simple Calculator in Python
 while True:
     print("Simple Calculator")
@@ -7,10 +8,7 @@ while True:
     print("4. Division")
     print("5. Modulus (%)")
     print("6. Exit")
-
     choice = input("Enter your choice (1/2/3/4/5/6): ")
-
-    
 
     if choice == '6':
         print("Thank you for using the calculator!")
