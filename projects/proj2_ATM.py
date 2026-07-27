@@ -8,11 +8,13 @@ while rem > 0:
     pin = input("Enter 4 digit pin: ")
     if len(pin) == 4:
         if pin == sbi_san['atm_pin']:
-            op = int(input('Enter : \n1.Check Balance \n2.WithDraw \n3.Deposit \n4.Transaction\'s \n5.Pin Change \n6.Exit \n Enter Your Choice: '))
+            print("---------------------------------\n_______-ATM Similutation-_______\n---------------------------------")
+            op = int(input('\n1.Check Balance \n2.WithDraw \n3.Deposit \n4.Transaction\'s \n5.Pin Change  \nEnter Your Choice: '))
             if op == 1:
                 print('Your current Balance = $',sbi_san['Balance'])
-            if op == 2:
-                amount = int(input('Enter amount to withdraw'))
+
+            elif op == 2:
+                amount = int(input('Enter amount to withdraw : $'))
                 if amount <= sbi_san['Balance'] and amount %100 == 0:
                     sbi_san['Balance'] -= amount
                     transactions.append(f"-Withdraw: {amount}")
@@ -26,13 +28,14 @@ while rem > 0:
             elif op ==3 :
                 amount = float(input("Enter the amount to deposit: $"))
             
-                if amount > 0:
+                if amount > 0 and amount % 100 == 0:
                     sbi_san['Balance'] += amount
                     transactions.append(f"-Deposit: {amount}")
                     print(amount, 'deposited successfully')
                     print("updated balance is : $",sbi_san['Balance'])
+
                 else:
-                    print('invalide amount!')
+                    print('invalide amount! or Change can not be deposited')
             elif op == 4:
                 if transactions == 0:
                     print('No transcations Found')
@@ -40,6 +43,7 @@ while rem > 0:
                     print('Transaction History')
                     for i in transactions:
                         print(i)
+
 
             elif op == 5:
                 old_pin = input('Enter Old pin :')
@@ -49,7 +53,8 @@ while rem > 0:
 
                     if len(new_pin) == 4 and new_pin.isdigit():
                         if new_pin == conform_pin:
-                            sbi_san.update({'atm_pin': new_pin})
+                            sbi_san['atm_pin'] = new_pin
+                            #sbi_san.update({'atm_pin':new_pin})
                             print('Pin changed successfully')
                         else:
                             print('Pin did not match')
@@ -58,10 +63,19 @@ while rem > 0:
                 else:
                     print('Incorrect Current pin')
 
+            else:
+                print("Invalid Choice")
 
-            elif op == 6:
+            op1 = int(input("_____-ATM Page-______\n1. Home \n2. Exit \nEnter Choice:"))
+            if op1  == 1:
+                continue
+            elif op1 == 2:
                 print('Thank you for using Atm ')
                 break
+            else:
+                print("Invalid Choice")
+
+            
         else:
             rem -= 1
             if rem > 0:
