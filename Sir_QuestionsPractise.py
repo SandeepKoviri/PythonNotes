@@ -26,6 +26,7 @@
 #     num1 = num2
 #     num2 = ad
 #     print(ad,end=" ")
+
 #Q4 check age and return true if age is less then 55
 
 # age = int(input("Enter your age :"))
@@ -49,3 +50,35 @@
 #     print("D")
 # else:
 #     print("Invalid Input")
+
+#1.cal are of a rectangle by taking length and width
+
+
+# leng_ = int(input("Enter lenght: "))
+# width = int(input("Enter width:"))
+
+# area = leng_ * width
+# print("Area =", area)
+
+
+#anagram
+
+# a = 'listen'
+# b= 'silent'
+# a = sorted(a)
+# b = sorted(b)
+# if a == b:
+#     print(f' is anagram')
+# else:
+#     print(f'is not anagram')
+
+#duplicate
+
+# a = input()
+# result = ''
+# for char in a:
+#     if char not in result:
+#         result += char
+# print(result)
+
+    
