@@ -65,12 +65,11 @@
 
 # a = 'listen'
 # b= 'silent'
-# a = sorted(a)
-# b = sorted(b)
-# if a == b:
-#     print(f' is anagram')
+
+# if sorted(a) == sorted(b):
+#     print(f'{a,b} is anagram')
 # else:
-#     print(f'is not anagram')
+#     print(f'{a,b} is not anagram')
 
 #duplicate
 
