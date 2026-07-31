@@ -80,4 +80,55 @@
 #         result += char
 # print(result)
 
-    
+#q1
+# print(5&3 , 6&9)
+# #output:
+# # 1 0
+ 
+# #q2
+# for i in range(1515):
+#     print("Sandeep")
+
+# #q3
+# a = float('85.5')
+# b= float(123)
+# c = int('9')
+# print(a,b,c)
+# print(type(a),type(b),type(c))
+
+
+
+# #q4
+n = 4
+for i in range(n):
+    for j in range(n-1):
+        print('*',end="")
+    print()
+
+#q5
+# 21. Prime and Palindrome Check
+# Question: Write a program to input a number, check whether it is prime, check whether it is a palindrome, and report if it is both.
+
+num = int(input("Enter a number: "))
+s = str(n)
+pal= s == s[::-1]
+count = 0
+for i in range(1,num+1):
+    if num %i==0:
+        count += 1
+prime = count == 2 
+
+if prime:
+    print(f"{num} is prime.")
+else:
+    print(f"{num} is not prime.")
+
+if pal:
+    print(f"{num} is a palindrome.")
+else:
+    print(f"{num} is not a palindrome.")
+
+if prime and pal:
+    print(f"{num} is both prime and palindrome.")
+else:
+    print(f"{num} is not both prime and palindrome.")
