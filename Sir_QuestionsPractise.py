@@ -98,37 +98,155 @@
 
 
 
-# #q4
-n = 4
-for i in range(n):
-    for j in range(n-1):
-        print('*',end="")
-    print()
+# # #q4
+# n = 4
+# for i in range(n):
+#     for j in range(n-1):
+#         print('*',end="")
+#     print()
 
-#q5
-# 21. Prime and Palindrome Check
-# Question: Write a program to input a number, check whether it is prime, check whether it is a palindrome, and report if it is both.
+# #q5
+# # 21. Prime and Palindrome Check
+# # Question: Write a program to input a number, check whether it is prime, check whether it is a palindrome, and report if it is both.
 
-num = int(input("Enter a number: "))
-s = str(n)
-pal= s == s[::-1]
-count = 0
-for i in range(1,num+1):
-    if num %i==0:
-        count += 1
-prime = count == 2 
+# num = int(input("Enter a number: "))
+# s = str(n)
+# pal= s == s[::-1]
+# count = 0
+# for i in range(1,num+1):
+#     if num %i==0:
+#         count += 1
+# prime = count == 2 
 
-if prime:
-    print(f"{num} is prime.")
-else:
-    print(f"{num} is not prime.")
+# if prime:
+#     print(f"{num} is prime.")
+# else:
+#     print(f"{num} is not prime.")
 
-if pal:
-    print(f"{num} is a palindrome.")
-else:
-    print(f"{num} is not a palindrome.")
+# if pal:
+#     print(f"{num} is a palindrome.")
+# else:
+#     print(f"{num} is not a palindrome.")
 
-if prime and pal:
-    print(f"{num} is both prime and palindrome.")
-else:
-    print(f"{num} is not both prime and palindrome.")
+# if prime and pal:
+#     print(f"{num} is both prime and palindrome.")
+# else:
+#     print(f"{num} is not both prime and palindrome.")
+
+
+#pattern
+#q1
+# *****
+# ****
+# ***
+# **
+# *
+# **
+# ***
+# ****
+# *****
+
+# n = 5
+# for i in range(n,0,-1):
+#     print('*' * i)
+# for i in range(2,n+1):
+#     print('*' * i)
+
+#q2
+# 1
+# 12
+# 123
+# 1234
+# 12345
+# 1234
+# 123
+# 12
+# 1
+
+# n = 5
+# for i in range(1, n + 1):
+#     for j in range(1, i + 1):
+#         print(j, end="")
+#     print()
+# for i in range(n - 1, 0, -1):
+#     for j in range(1, i + 1):
+#         print(j, end="")
+#     print()
+
+#q3
+# a
+# ab
+# abc
+# abcd
+# abcde
+# abcd
+# abc
+# ab
+# a
+# ab
+# abc
+# abcd
+# abcde
+
+
+# n = 5
+# for i in range(1, n + 1):
+#     for j in range(1, i + 1):
+#         print(chr(64+j), end="")
+#     print()
+# for i in range(n - 1, 0, -1):
+#     for j in range(1, i + 1):
+#         print(chr(64+j), end="")
+#     print()
+# for i in range(2, n + 1):
+#     for j in range(1, i + 1):
+#         print(chr(64+j), end="")
+#     print()
+
+# a
+# ab
+# abc
+# abcd
+# abcde
+# abcd
+# abc
+# ab
+# a
+# ab
+# abc
+# abcd
+# abcde
+# n = 5
+# letters = 'abcde'
+# for i in range(1, n + 1):
+#     for j in range(i):
+#         print(letters[j], end="")
+#     print()
+# for i in range(n - 1, 0, -1):
+#     for j in range(i):
+#         print(letters[j], end="")
+#     print()
+# for i in range(2, n + 1):
+#     for j in range(i):
+#         print(letters[j], end="")
+#     print()
+
+# a
+# ab
+# abc
+# abcd
+# abcde
+# abcd
+# abc
+# ab
+# a
+# leters = 'abcde'
+# n = len(leters)
+# for i in range(1, n + 1):
+#     for j in range(i):
+#         print(leters[j], end="")
+#     print()
+# for i in range(n - 1, 0, -1):
+#     for j in range(i):
+#         print(leters[j], end="")
+#     print()
