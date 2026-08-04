@@ -1,3 +1,5 @@
+import random
+
 sbi_sandy = {
     'Name':'Sandeep',
     'account_no':789456123,
@@ -70,29 +72,36 @@ while rem > 0:
     pin = input("Enter 4 digit pin: ")
     if len(pin) == 4:
         if pin == sbi_sandy['atm_pin']:
-            while True:
-                menu()
-                choice = int(input("Enter Your Chioce: "))
-                if choice == 1:
-                    check_balance()
-                elif choice == 2:
-                    withdraw()
-                elif choice == 3:
-                    deposit()
-                elif choice == 4:
-                    transaction()
-                elif choice == 5:
-                    pinchange()
-                else:
-                    print("Invalid Choice")
-                op1 = int(input("_____-ATM Page-______\n1. Home \n2. Exit \nEnter Choice:"))
-                if op1  == 1:
-                    continue
-                elif op1 == 2:
-                    print('Thank you for using Atm ')
-                    exit()
-                else:
-                    print("Returning to Home...")
+            otp = random.randint(1000,9999) 
+            print(otp)
+            otp_ = int(input("Enter OTP:"))
+            if otp == otp_:
+                while True:
+                    menu()
+                    choice = int(input("Enter Your Chioce: "))
+                    if choice == 1:
+                        check_balance()
+                    elif choice == 2:
+                        withdraw()
+                    elif choice == 3:
+                        deposit()
+                    elif choice == 4:
+                        transaction()
+                    elif choice == 5:
+                        pinchange()
+                    else:
+                        print("Invalid Choice")
+                    op1 = int(input("_____-ATM Page-______\n1. Home \n2. Exit \nEnter Choice:"))
+                    if op1  == 1:
+                       continue
+                    elif op1 == 2:
+                        print('Thank you for using Atm ')
+                        exit()
+                    else:
+                        print("Returning to Home...")
+            else:
+                print("Incorrect OTP.......")
+                exit()
         else:
             rem -= 1
             if rem > 0:
