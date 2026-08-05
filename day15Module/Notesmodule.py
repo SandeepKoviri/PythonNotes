@@ -99,13 +99,11 @@ print(r.randint(1000, 9999 ))
 import math as m
 
 print(m.sqrt(25))
-'''
 sand = {
     'name' : 'sandeep',
     'atm_pin' : '1234'
 }
 import random
-
 rem = 3
 while rem > 0:
     pin = int(input("Enter The pin :"))
@@ -118,10 +116,10 @@ while rem > 0:
         else:
             print("Incorrect Otp:")
             exit()
-
     else:
         rem -= 1
         if rem > 0:
             print(f'Incorrecty pin {rem} attempts left')
         else:
-            print("card block")
+            print("card block"
+'''
