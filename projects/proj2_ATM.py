@@ -3,6 +3,8 @@ sbi_san = {'Name':'sandeep',
            'Balance': 78500
 }
 import random
+from datetime import datetime
+now = datetime.now()
 transactions = []
 rem = 3
 while rem > 0:
@@ -22,7 +24,7 @@ while rem > 0:
                     amount = int(input('Enter amount to withdraw : $'))
                     if amount <= sbi_san['Balance'] and amount %100 == 0:
                         sbi_san['Balance'] -= amount
-                        transactions.append(f"-Withdraw: {amount}")
+                        transactions.append(f"-Withdraw: {amount},Time:{now.strftime('%t-%m %Y/%m/%d')}")
                         print('collect u r cash')
                         print("remaining balance : $",sbi_san['Balance'])
                     else:
@@ -35,7 +37,7 @@ while rem > 0:
             
                     if amount > 0 and amount % 100 == 0:
                         sbi_san['Balance'] += amount
-                        transactions.append(f"-Deposit: {amount}")
+                        transactions.append(f"-Deposit: {amount},Time:{now.strftime('%t-%m %Y/%m/%d')}")
                         print(amount, 'deposited successfully')
                         print("updated balance is : $",sbi_san['Balance'])
 

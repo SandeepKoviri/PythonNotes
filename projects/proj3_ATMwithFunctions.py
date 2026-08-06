@@ -1,4 +1,6 @@
 import random
+from datetime import datetime
+now = datetime.now()
 
 sbi_sandy = {
     'Name':'Sandeep',
@@ -25,7 +27,7 @@ def withdraw():
         print("Amount should be a multiple of 100.")
     else:
         sbi_sandy['balance'] -= amount
-        sbi_sandy['transaction'].append(f"-Withdraw : ${amount}")
+        sbi_sandy['transaction'].append(f"-Withdraw : ${amount},Time:{now.strftime('%t-%m %Y/%m/%d')}")
         print('Collect cash')
         print(f"You withdraw amount is ${amount} and remaining Balance ${sbi_sandy['balance']}")
 
@@ -37,7 +39,7 @@ def deposit():
         print("Invalid amount")
     else:
         sbi_sandy['balance'] += amount
-        sbi_sandy['transaction'].append(f'-Deposit : ${amount}')
+        sbi_sandy['transaction'].append(f'-Deposit : ${amount},Time:{now.strftime('%t-%m %Y/%m/%d')}')
         print("Amount Deposit Successfully")
         print(f"Updated Balance : ${sbi_sandy['balance']}")
 
