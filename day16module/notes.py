@@ -1,4 +1,7 @@
 '''
+------day16------
+----------------
+---5/08/26-----
 ----------------
 math
 ---
@@ -107,23 +110,199 @@ print(sys.version)
 print(sys.path)
 
 
--exit()
---------
---> this is used to exit from the program
--platform()
------------
---->it will give python run platform
-eg:
+exit
+----
+--> this function will exit from the program
+eg
+--
 import sys
-
 print(sys.exit())
-print(sys.platform())
 
--argv
------
----> it will give the current file run path
+platform
+--------
+--> it will give the python run platform
 
-eg 
+eg
+--
+import sys
+print(sys.platform)
+
+o/p:
+win32
+
+argv
+----
+--> it will give the current file run path
+
+eg
+--
 import sys
 print(sys.argv)
+
+o/p:
+['C:\\Users\\rajana yaswanth\\Downloads\\python\\module.py']
+
+datetime
+--------
+--> used to work with date and time
+
+now
+---
+--> it will give the today time + date
+
+eg
+--
+from datetime import datetime, date, time
+
+print(datetime.now())
+print(datetime.today())
+
+o/p:
+2026-08-05 14:50:39.607454
+2026-08-05 14:50:39.655701
+
+
+from datetime import datetime
+now = datetime.now()
+print(now.strftime('%Y-%m-%d'))
+print(now.strftime('%A'))
+print(now.strftime('%B'))
+print(now.strftime('%H:%M:%S'))
+
+o/p:
+2026-08-05
+Wednesday
+August
+14:58:05
+
+%Y --> will get the year
+%m --> will get the month
+%d --> will get the day
+%H --> will get the hour
+%M --> will get the minutes
+%S --> will get the seconds
+%A --> current day
+%B --> current month
+
+collections
+-----------
+-->the collections module will provide container type data which is more powerful than built-in data types (dict, list, tuple)
+
+import collections
+
+data = ['yash', 'raj', 'woxsen', 'uni','yash']
+print(collections.Counter(data))
+
+deque
+-----
+--> used to work with list
+
+eg
+--
+from collections import deque
+
+how = deque([7,8,9])
+how.appendleft(6)
+print(how)
+
+o/p:
+deque([6, 7, 8, 9])
+
+extend
+------
+
+from collections import deque
+how = ([1,2,3])
+how.extend([4,5,6,7])
+print(how)
+
+o/p:
+v[1, 2, 3, 4, 5, 6, 7]
+
+pop
+---
+
+from collections import deque
+how = deque([1,2,3])
+how.pop()
+print(how)
+
+o/p:
+deque([1, 2])
+
+namedtuple
+----------
+
+from collections import namedtuple
+data = namedtuple("stu",('name','age'))
+print(data('yash','21'))
+
+o/p:
+stu(name='yash', age='21')
+
+itertools
+---------
+
+count
+-----
+
+from itertools import count
+
+c = count(76)
+for j in range(7):
+    print(next(c))
+
+o/p;
+76
+77
+78
+79
+80
+81
+82
+
+repeat
+------
+
+import itertools
+for j in itertools.repeat('yash',7):
+    print(j)
+
+o/p:
+yash
+yash
+yash
+yash
+yash
+yash
+yash
+
+
+from itertools import permutations
+
+data = permutations([1,2,3],2)
+print(list(data))
+
+o/p:
+[(1, 2), (1, 3), (2, 1), (2, 3), (3, 1), (3, 2)]
+
+from itertools import permutations, combinations
+
+data = permutations([1,2,3],2)
+print(list(data))
+
+any_ = combinations([1,2,3],2)
+print(list(any_))
+
+0/p:
+[(1, 2), (1, 3), (2, 1), (2, 3), (3, 1), (3, 2)]
+[(1, 2), (1, 3), (2, 3)]
+
+import platform
+print(platform.python_version())
+print(platform.python_compiler())
+print(platform.machine())
+print(platform.processor())
+
+----------
 '''
