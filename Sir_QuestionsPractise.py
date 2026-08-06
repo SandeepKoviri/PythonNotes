@@ -250,3 +250,80 @@
 #     for j in range(i):
 #         print(leters[j], end="")
 #     print()
+
+
+# Write a Python program to calculate the area of a rectangle given its length and width.
+# a = int(input("Enter a length of rectangle: "))
+# b = int(input("Enter a width of rectangle: "))
+# area = a * b
+# print("area of a rectangle",area)
+
+
+# Create a program that takes a user's name and age as input and prints a greeting message.
+# name = input("Enter name:")
+# age = int(input("Enter age: "))
+# print(f" Hello {name}, Welcome to the python world")
+
+
+# Write a program to check if a number is even or odd.
+# a = int(input("Enter a number:"))
+# if a % 2 == 0:
+#     print("Even")
+# else:
+#     print("odd")
+
+
+# Given a list of numbers, find the maximum and minimum values.
+# a = [1,2,3,4,5]
+
+# min_ = min(a)
+# max_ = max(a)
+# print(f"Max{max_} , Min{min_}")
+
+# Create a Python function to check if a given string is a palindrome.
+# a = input("Enter a string:").lower()
+# b = a[::-1]
+# if b == a:
+#     print("It's a  palindrome ")
+# else:
+#     print("print("It's not a palindrome ")")
+
+# Calculate the compound interest for a given principal amount, interest rate, and time period.
+# p = int(input("Enter principal amount:"))
+# i = int(input("enter Rate of Interest:"))
+# t= int(input("Enter time period in years"))
+# tot = p * i * t
+# ci = tot//100
+# print("Compond interest is:",ci)
+
+# Write a program that converts a given number of days into years, weeks, and days.
+# Get the total number of days from the user
+# t_days = int(input("Enter the number of days: "))
+
+# years = t_days // 365
+# remaining_days = t_days % 365
+# weeks = remaining_days // 7
+# days = remaining_days % 7
+# print(f"{t_days} are years:{years},weeks:{weeks},days:{days}")
+
+
+# Given a list of integers, find the sum of all positive numbers.
+# a = [10,20,-30,40,50]
+# sum = 0
+# for i in a:
+#     if i > 0:
+#         sum += i
+# print(sum)
+
+# Create a program that takes a sentence as input and counts the number of words in it.
+# a = input("Enter a string:")
+# l = len(a)
+# print(l)
+
+# Implement a program that swaps the values of two variables.
+# a = int(input("enter a number:"))
+# b = int(input("Enter a number:"))
+# a, b = b, a
+# print(a,b)
+
+
