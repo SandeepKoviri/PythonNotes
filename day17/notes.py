@@ -34,6 +34,7 @@ for i in range(5):
 
 print(password)
 
+#updating time and date in transaction
 bank_balance = 7777
 
 from datetime import datetime
@@ -63,5 +64,21 @@ while True:
         print("incorrect choice")
         print("thank you for visiting the ATM")
         sys.exit()
+
+#game of choice
+import random
+
+comp = random.randint(0,10)
+print("----------------------------------------------------------")
+print("---------------------Gess The Number----------------------")
+print("----------------------------------------------------------")
+user = int(input("Enter the number(0-10): "))
+
+if comp == user:
+    
+    print(f"{comp} and {user}\n U won!..........")
+else:
+    print(f"{comp} and {user}\nU lost \n/'better luck next time.../'")
+
 '''
 
