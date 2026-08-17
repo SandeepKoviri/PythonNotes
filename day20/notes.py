@@ -157,18 +157,48 @@ tata = car()
 tata.brake_()
 tata.accelater_()
 
+class students:
+    def __init__(self,name,age,batch):
+        self.name = name
+        self.age = age
+        self.batch = batch
+
+    def all_data(self):
+        print(self.name)
+        print(self.age)
+        print(self.batch)
+
+stu_1 = students('yash', 21, 5)
+stu_1.all_data()
+
+stu_2 = students('raj', 77, 7)
+stu_2.all_data()
+eg4
+---
+class cricket:
+    def __init__(self,format_mode,overs, jersey_colour, number_days, innings):
+        self.format_mode = format_mode
+        self.overs = overs
+        self.jersey_colour = jersey_colour
+        self.number_days = number_days
+        self.innings = innings
+        
+
+    def all_data(self):
+        print(self.format_mode)
+        print(self.overs)
+        print(self.jersey_colour)
+        print(self.number_days)
+        print(self.innings)
+
+
+test = cricket('test', 90, 'white', 5, 4)
+test.all_data()
+
+odi = cricket('odi', 50, 'national_colour', 1, 2)
+odi.all_data()
+
+t20 = cricket('t20', 20, 'national_colour', 1, 2)
+t20.all_data()
+
 '''
-class student:
-    def __init__(self, name, age, batch):
-            self.name = name
-            self.age = age
-            self.batch = batch
-
-    def all_(self):
-          print(self.name)
-          print(self.age)
-          print(self.batch)
-          
-stu1 = student("sandeep",24,"pf5")
-stu1.all_()
-
