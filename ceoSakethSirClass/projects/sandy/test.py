@@ -15,6 +15,8 @@ playsound.playsound('audio.mp3')
 
 from gtts import gTTS
 from twogames import playaGame
+from proj6QR_code import qr_code
+import qrcode
 import playsound
 import time
 import os
@@ -58,7 +60,7 @@ def va(data):
         listening=True
         respond('I am fine, thanks for asking')
 
-    elif "Fine" in data:
+    elif "fine" in data:
         listening=True
         respond('Thank you')
 
@@ -66,7 +68,7 @@ def va(data):
         listening=True
         respond('Only study... one focus in 2026')
 
-    elif 'How are things going' in data:
+    elif 'how are things going' in data:
         listening=True
         respond('Antha okay ika nene set avvali')
     elif 'time' in data:
@@ -83,10 +85,17 @@ def va(data):
         listening = True
         respond("opening game")
         playaGame()
-    
 
+    elif "qr code" in data:
+        listening = True
+        respond("Opening QR code generator")
 
-    elif "open YouTube" in data:
+        qr_code()
+
+        respond("QR code created successfully")
+
+ 
+    elif "open youtube" in data:
         listening=True
         respond("opening youtube")
         webbrowser.open("https://www.youtube.com/")
